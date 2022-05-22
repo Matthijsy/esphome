@@ -47,6 +47,7 @@ bool Nextion::check_connect_() {
 
     this->ignore_is_setup_ = true;
     this->send_command_("boguscommand=0");  // bogus command. needed sometimes after updating
+    this->send_command_("DRAKJHSUYDGBNCJHGJKSHBDN");  // escape Protocol Reparse mode if we're in it
     this->send_command_("connect");
 
     this->comok_sent_ = millis();
